@@ -14,9 +14,19 @@ http://mobiletou.ch/2014/03/gittio-titanium%E7%94%A8%E3%83%A2%E3%82%B8%E3%83%A5%
 
 https://github.com/FokkeZB/Tutorial
 
+### ACS Sample
+
+~/.titanium/modules/commonjs/ti.cloud/3.2.7/
+
 ### Alloy Sample
 
 https://github.com/appcelerator/alloy/tree/master/test/apps/ui
+
+### TiPlatformConnect
+
+The easiest way to handle Twitter, Tumblr, Foursquare, and more authentication in your Titanium Mobile app
+
+https://github.com/k0sukey/TiPlatformConnect
 
 ### Memory Management
 
