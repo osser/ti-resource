@@ -1,0 +1,24 @@
+<div class="page-header">
+    <h3>文章一覧</h3>
+</div>
+
+<% page.posts.each(function(post, i){ %>
+    <div>
+    <%= i %> - <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </div>
+<% }) %>
+
+<hr/>
+
+<div class="myPagerNav">
+<%- paginator({
+    prev_text: '&laquo; Prev',
+    next_text: 'Next &raquo;'
+}) %>
+</div>
+
+<hr/>
+
+<% for(p in page) { %>
+page.<%- p %>:<%- page[p] %><br/>
+<% } %>
