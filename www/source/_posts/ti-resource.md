@@ -10,6 +10,10 @@ http://www.tidev.io/
 http://gitt.io/
 http://mobiletou.ch/2014/03/gittio-titanium%E7%94%A8%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%ABalloy%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E7%AE%A1%E7%90%86%E3%83%84%E3%83%BC%E3%83%AB
 
+### AndroidとiOS開発をTitanium Mobileでやった時に得られたTipsまとめ
+
+http://qiita.com/TONY0922/items/0826e1b66e9a4b3c463f
+
 ### Titanium Alloy Tutorial
 
 https://github.com/FokkeZB/Tutorial
