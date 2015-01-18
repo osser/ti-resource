@@ -14,6 +14,12 @@ http://mobiletou.ch/2014/03/gittio-titanium%E7%94%A8%E3%83%A2%E3%82%B8%E3%83%A5%
 
 http://qiita.com/TONY0922/items/0826e1b66e9a4b3c463f
 
+### nl.fokkezb.pullToRefresh
+
+Widget to implement a table pull-to-refresh header in Titanium Alloy
+
+https://github.com/FokkeZB/nl.fokkezb.pullToRefresh
+
 ### How to update your app and modules for 64-bit support
 
 http://www.tidev.io/2015/01/09/how-to-update-your-app-and-modules-for-64-bit-support/
@@ -180,11 +186,6 @@ exampleフォルダにある内容ではアプリ全体のテスト…といっ�
 ### JSQMessagesViewController
 
 https://github.com/jessesquires/JSQMessagesViewController
-
-### Alloy-PullToRefresh
-
-https://github.com/jolicode/Alloy-PullToRefresh
-http://jolicode.com/blog/an-alloy-pulltorefresh-widget
 
 ### com.madrocket.ti.slidemenu
 
