@@ -20,9 +20,17 @@ Widget to implement a table pull-to-refresh header in Titanium Alloy
 
 https://github.com/FokkeZB/nl.fokkezb.pullToRefresh
 
+### Titanium ＋Alloy＋ACSの構成でユーザーログインでFacebookアカウントを利用する
+
+http://qiita.com/h5y1m141@github/items/6fa514db8066a96840f5
+
 ### How to update your app and modules for 64-bit support
 
 http://www.tidev.io/2015/01/09/how-to-update-your-app-and-modules-for-64-bit-support/
+
+### How to get Android/iPhone device unique ID using titanium appcelerator
+
+http://developer.appcelerator.com/question/121208/how-to-get-androidiphone-device-unique-id-using-titanium-appcelerator
 
 ### Titanium Alloy Tutorial
 
