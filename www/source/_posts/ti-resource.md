@@ -14,6 +14,10 @@ http://mobiletou.ch/2014/03/gittio-titanium%E7%94%A8%E3%83%A2%E3%82%B8%E3%83%A5%
 
 http://qiita.com/TONY0922/items/0826e1b66e9a4b3c463f
 
+### How to update your app and modules for 64-bit support
+
+http://www.tidev.io/2015/01/09/how-to-update-your-app-and-modules-for-64-bit-support/
+
 ### Titanium Alloy Tutorial
 
 https://github.com/FokkeZB/Tutorial
