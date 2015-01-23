@@ -7,4 +7,7 @@ tags:
 
 http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels
 
+#### Android Themes
+
+http://docs.appcelerator.com/titanium/3.0/#!/guide/Android_Themes
 

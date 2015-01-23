@@ -7,7 +7,7 @@ tags:
 
 https://dev.twitter.com/rest/public
 
-### 初心者向けの、Twitter APIマニュアルです。
+#### 初心者向けの、Twitter APIマニュアルです。
 
 http://syncer.jp/web/api/twitter/
 

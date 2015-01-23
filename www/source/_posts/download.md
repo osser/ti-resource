@@ -11,6 +11,14 @@ http://myresource.osser.jp/download/Da_Kai_Ni_De_Jiang_Luo_San.mobi
 
 http://myresource.osser.jp/download/progit.ja.mobi
 
+#### Android入門から精通まで
+
+http://myresource.osser.jp/download/Android_Cong_Ru_Men_Dao_Jing_Ton.mobi
+
+#### 創業直線
+
+http://myresource.osser.jp/download/chuang_ye_zhi_xian.mobi
+
 #### Facebook物語
 
 http://myresource.osser.jp/download/facebook_from0_to1.mobi
