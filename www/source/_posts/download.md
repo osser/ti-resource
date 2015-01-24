@@ -3,6 +3,18 @@ date: 2015-01-18 10:28:50
 tags:
 ---
 
+#### 乔布斯传
+
+http://myresource.osser.jp/download/qiaobusizhuan.mobi
+
+#### 乔布斯演讲
+
+http://myresource.osser.jp/download/qiaobusispeech.mobi
+
+#### 微创新
+
+http://myresource.osser.jp/download/wei_chuang_xin.mobi
+
 #### Open your parachute
 
 http://myresource.osser.jp/download/Da_Kai_Ni_De_Jiang_Luo_San.mobi
