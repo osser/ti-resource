@@ -15,6 +15,10 @@ http://myresource.osser.jp/download/qiaobusispeech.mobi
 
 http://myresource.osser.jp/download/wei_chuang_xin.mobi
 
+#### Redis入門
+
+http://myresource.osser.jp/download/Redis_Rumen.mobi
+
 #### Open your parachute
 
 http://myresource.osser.jp/download/Da_Kai_Ni_De_Jiang_Luo_San.mobi
