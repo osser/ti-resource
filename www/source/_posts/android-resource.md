@@ -20,4 +20,6 @@ http://docs.appcelerator.com/titanium/latest/#!/guide/Android_Action_Bar
 http://developer.android.com/design/patterns/actionbar.html
 http://developer.android.com/guide/topics/ui/actionbar.html
 
+### アプリ名に日本語を含んでいるとDistributeするときにError対処
 
+http://se-suganuma.blogspot.jp/2014/04/titanium-distribute.html
