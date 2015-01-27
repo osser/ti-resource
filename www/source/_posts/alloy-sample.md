@@ -3,6 +3,10 @@ date: 2015-01-23 12:03:51
 tags:
 ---
 
+#### Alloy Framework のドキュメントの日本語訳
+
+https://github.com/ledmonster/alloy-doc-ja
+
 #### Alloy URL
 
 http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Framework
