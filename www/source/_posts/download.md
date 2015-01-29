@@ -3,6 +3,10 @@ date: 2015-01-18 10:28:50
 tags:
 ---
 
+#### 拖延心理学
+
+http://myresource.osser.jp/download/tuo_yan_xin_li_xue.mobi
+
 #### 乔布斯传
 
 http://myresource.osser.jp/download/qiaobusizhuan.mobi
