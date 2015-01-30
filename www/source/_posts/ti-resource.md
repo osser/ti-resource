@@ -22,6 +22,12 @@ TabbedBar
 
 https://github.com/Marcocanc/TiModules
 
+### wriststrap
+
+A Twitter Bootstrap inspired framework for Appcelerator Titanium (Alloy)
+
+https://github.com/TNuzzi/wriststrap
+
 #### nl.fokkezb.pullToRefresh
 
 Widget to implement a table pull-to-refresh header in Titanium Alloy
