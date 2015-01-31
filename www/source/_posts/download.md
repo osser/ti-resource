@@ -3,6 +3,10 @@ date: 2015-01-18 10:28:50
 tags:
 ---
 
+#### 无价：洞悉大众心理玩转价格游戏
+
+http://myresource.osser.jp/download/wu_jia.mobi
+
 #### 拖延心理学
 
 http://myresource.osser.jp/download/tuo_yan_xin_li_xue.mobi
