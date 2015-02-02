@@ -3,6 +3,10 @@ date: 2015-01-18 10:28:50
 tags:
 ---
 
+#### 引爆点：如何制造流行
+
+http://myresource.osser.jp/download/yin_bao_dian.mobi
+
 #### 无价：洞悉大众心理玩转价格游戏
 
 http://myresource.osser.jp/download/wu_jia.mobi
