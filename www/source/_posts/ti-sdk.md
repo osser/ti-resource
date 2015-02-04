@@ -1,7 +1,14 @@
 title: Ti-SDK
-date: 2015-01-23 12:48:35
 tags:
 ---
+
+#### nend
+
+http://www.nend.net/dl/mediapartner/
+
+#### New Facebook Modules
+
+http://www.tidev.io/2014/11/20/new-facebook-modules/
 
 #### Camera and Photo Gallery APIs
 

@@ -3,6 +3,16 @@ date: 2015-02-04 10:18:21
 tags:
 ---
 
+#### 複数ブログ投稿、管理サービス
+
+##### 無料ブログ一括投稿システム｜楽ブロ
+
+http://rakublo.jp/
+
+##### Windows Live Writer
+
+http://www.microsoft.com/ja-jp/download/details.aspx?id=8621
+
 #### 日本ブログサービス
 
 ##### はてなブログ
