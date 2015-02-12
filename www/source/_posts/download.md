@@ -1,7 +1,10 @@
 title: ダウンロード
-date: 2015-01-18 10:28:50
 tags:
 ---
+
+#### 我的互联网方法论
+
+http://myresource.osser.jp/download/wo_de_hu_lian_wang_fang_fa_lun.mobi
 
 #### 引爆点：如何制造流行
 
