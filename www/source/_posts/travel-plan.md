@@ -6,6 +6,10 @@ tags:
 
 http://www.eventfestival.info/
 
+#### ロイヤル・カリビアン・クルーズ日本
+
+http://www.royalcaribbean.jp/
+
 #### トラベルロード
 
 http://www.travelroad.co.jp/
@@ -21,3 +25,7 @@ http://www.citytours.co.jp/
 #### 日本旅行
 
 http://www.nta.co.jp/
+
+#### 東京港客船ターミナル
+
+http://www.tptc.co.jp/tabid/67/Default.aspx
