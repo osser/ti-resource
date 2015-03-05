@@ -2,6 +2,12 @@ title: ダウンロード
 tags:
 ---
 
+#### Building Cross-Platform Apps using Titanium, Alloy, and Appcelerator Cloud Services
+
+http://myresource.osser.jp/download/Building_Cross_Platform_Apps_using_Titanium_Alloy_and_Appcelerator_Cloud_Services.pdf
+
+http://it-ebooks.info/book/4475/
+
 #### 効率７習慣
 
 http://myresource.osser.jp/download/habits7.mobi
