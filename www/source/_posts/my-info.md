@@ -9,3 +9,7 @@ http://www.lifehacker.jp/
 #### 36KR
 
 http://www.36kr.com/
+
+#### みんなはPM
+
+http://www.woshipm.com/
