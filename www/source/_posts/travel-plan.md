@@ -42,6 +42,8 @@ http://www.travelroad.co.jp/
 
 http://www.his-j.com/
 
+http://www.sports-his.com/
+
 #### シティツアーズ（CITY TOURS）
 
 http://www.citytours.co.jp/
