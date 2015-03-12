@@ -2,6 +2,10 @@ title: ダウンロード
 tags:
 ---
 
+#### 精益創業
+
+http://myresource.osser.jp/download/jing_yi_chuang_ye.mobi
+
 #### Building Cross-Platform Apps using Titanium, Alloy, and Appcelerator Cloud Services
 
 http://myresource.osser.jp/download/Building_Cross_Platform_Apps_using_Titanium_Alloy_and_Appcelerator_Cloud_Services.pdf
