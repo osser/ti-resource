@@ -6,9 +6,9 @@ tags:
 
 http://www.eventfestival.info/
 
-#### 西鉄旅行(サッカーツアー)
+#### 横浜高速鉄道株式会社｜みなとみらい線
 
-http://www.nishitetsutravel.jp/
+http://www.mm21railway.co.jp/
 
 #### 子供とお出かけ情報「いこーよ」
 
@@ -59,3 +59,8 @@ http://www.jtb.co.jp/
 #### 東京港客船ターミナル
 
 http://www.tptc.co.jp/tabid/67/Default.aspx
+
+#### 西鉄旅行(サッカーツアー)
+
+http://www.nishitetsutravel.jp/
+
