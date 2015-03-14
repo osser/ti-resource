@@ -6,6 +6,10 @@ tags:
 
 http://www.eventfestival.info/
 
+#### 東京観光バス・スカイダック
+
+http://www.skybus.jp/
+
 #### 横浜高速鉄道株式会社｜みなとみらい線
 
 http://www.mm21railway.co.jp/
