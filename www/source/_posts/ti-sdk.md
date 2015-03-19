@@ -6,6 +6,10 @@ tags:
 
 http://www.nend.net/dl/mediapartner/
 
+#### Create the Ultimate User Experience: Must-Have Appcelerator Modules
+
+http://www.appcelerator.com/blog/2015/03/must-have-modules/
+
 #### New Facebook Modules
 
 http://www.tidev.io/2014/11/20/new-facebook-modules/
