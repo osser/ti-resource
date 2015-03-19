@@ -10,6 +10,10 @@ http://appmarketinglabo.net/
 
 http://www.lifehacker.jp/
 
+#### 创业邦
+
+http://www.cyzone.cn/
+
 #### 36KR
 
 http://www.36kr.com/
