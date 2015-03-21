@@ -1,6 +1,14 @@
-title: ダウンロード
+title: Kindle書籍
 tags:
 ---
+
+#### 从乞丐到元首
+
+http://myresource.osser.jp/download/poor_2_present.mobi
+
+#### 罗永浩我的奋斗
+
+http://myresource.osser.jp/download/luo_yong_hao_wo_de_fen_dou.mobi
 
 #### 中国10単語
 
