@@ -14,6 +14,10 @@ http://www.poke.co.jp/
 
 http://www.skybus.jp/
 
+#### はとバス（日帰り・宿泊）
+
+http://www.hatobus.co.jp/
+
 #### 横浜高速鉄道株式会社｜みなとみらい線
 
 http://www.mm21railway.co.jp/
