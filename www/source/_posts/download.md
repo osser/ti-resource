@@ -2,6 +2,18 @@ title: ダウンロード
 tags:
 ---
 
+#### 中国10単語
+
+http://myresource.osser.jp/download/china10word.mobi
+
+#### 看见
+
+http://myresource.osser.jp/download/kanjian.mobi
+
+#### 腾讯1500亿公司
+
+http://myresource.osser.jp/download/tecent1500yi.mobi
+
 #### 我们台湾这些年
 
 http://myresource.osser.jp/download/wo_men_tai_wan_zhe_xie_nian.mobi
