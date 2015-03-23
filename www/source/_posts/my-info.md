@@ -10,6 +10,10 @@ http://appmarketinglabo.net/
 
 http://www.lifehacker.jp/
 
+#### 知乎
+
+http://www.zhihu.com/
+
 #### 创业邦
 
 http://www.cyzone.cn/

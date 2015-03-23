@@ -148,3 +148,6 @@ http://myresource.osser.jp/download/bigdata_time.mobi
 
 http://myresource.osser.jp/download/chihu_changye.mobi
 
+#### 商业类电子书
+
+http://vdisk.weibo.com/u/5340187825
