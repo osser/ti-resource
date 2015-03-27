@@ -25,3 +25,7 @@ http://www.36kr.com/
 #### みんなはPM
 
 http://www.woshipm.com/
+
+#### 从游戏中学习 | 如何做出让人沉迷的好产品
+
+http://www.woshipm.com/pd/142837.html
