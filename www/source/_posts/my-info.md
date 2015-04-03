@@ -29,3 +29,8 @@ http://www.woshipm.com/
 #### 从游戏中学习 | 如何做出让人沉迷的好产品
 
 http://www.woshipm.com/pd/142837.html
+
+#### 0-100万！高手教你如何做APP推广
+
+http://www.woshipm.com/operate/146158.html
+
