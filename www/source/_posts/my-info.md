@@ -2,6 +2,13 @@ title: 情報収集
 tags:
 ---
 
+#### アプリ分析とアプリデータのスタンダード
+
+https://www.appannie.com/jp/
+
+説明：
+http://www.woshipm.com/it/147931.html
+
 #### アプリマーケティング研究所
 
 http://appmarketinglabo.net/
