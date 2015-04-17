@@ -17,6 +17,10 @@ http://appmarketinglabo.net/
 
 http://www.lifehacker.jp/
 
+#### keynoteの使い方
+
+http://www.keynote-study.com/
+
 #### 简书
 
 http://www.jianshu.com/
@@ -44,6 +48,10 @@ http://www.woshipm.com/
 #### NextApp(36kr)
 
 http://next.36kr.com
+
+#### 虎嗅网
+
+http://www.huxiu.com/
 
 #### 从游戏中学习 | 如何做出让人沉迷的好产品
 
