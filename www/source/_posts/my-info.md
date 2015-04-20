@@ -17,6 +17,10 @@ http://appmarketinglabo.net/
 
 http://www.lifehacker.jp/
 
+#### TechCrunch Japan
+
+http://jp.techcrunch.com/
+
 #### keynoteの使い方
 
 http://www.keynote-study.com/
