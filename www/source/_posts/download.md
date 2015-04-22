@@ -2,6 +2,34 @@ title: Kindle書籍
 tags:
 ---
 
+#### 互联网思维
+
+http://myresource.osser.jp/download/Hu_Lian_Wang_Si_Wei.mobi
+
+#### 杂货店
+
+http://myresource.osser.jp/download/Za_Huo_Dian.mobi
+
+#### From 0 To 1
+
+http://myresource.osser.jp/download/From0To1.mobi
+
+#### 风口上的猪
+
+http://myresource.osser.jp/download/Feng_Kou_Shang_De_Zhu.mobi
+
+#### 学习风险投资
+
+http://myresource.osser.jp/download/Learn_VetureCapital.mobi
+
+#### 学校不学的
+
+http://myresource.osser.jp/download/School_Sex_Lesson.mobi
+
+#### 中国近代史
+
+http://myresource.osser.jp/download/Zhong_Guo_Jin_Dai_Shi.mobi
+
 #### 从乞丐到元首
 
 http://myresource.osser.jp/download/poor_2_present.mobi
