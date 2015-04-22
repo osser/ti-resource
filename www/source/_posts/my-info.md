@@ -69,3 +69,6 @@ http://www.woshipm.com/operate/146158.html
 
 http://keiei.freee.co.jp/2014/09/09/vc/
 
+#### 创业产品值得注意的8个细节
+
+http://www.jianshu.com/p/058deb53cf6c
