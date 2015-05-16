@@ -1,10 +1,10 @@
-title: app-plan
+title: アプリ企画
 tags:
 ---
 
-#### アプリマーケティング研究所
+#### 社交产品的本质类似传销！你玩的微信、QQ不是社交
 
-http://appmarketinglabo.net/
+http://www.tuicool.com/articles/jYbmAjq
 
 #### 失敗しないスマホアプリ企画＆マーケティング
 

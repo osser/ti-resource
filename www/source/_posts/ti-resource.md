@@ -1,6 +1,10 @@
 title: Titaniumリソース
 ---
 
+#### Appcelerator University
+
+http://university.appcelerator.com/
+
 #### tidev
 
 http://www.tidev.io/
