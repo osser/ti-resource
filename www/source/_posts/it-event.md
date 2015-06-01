@@ -23,3 +23,11 @@ http://connpass.com/
 スタートアップ幹部を志す人材と、CEOが直接コミュニケーションできる転職サイト「Amateras Online」
 
 https://amater.as/
+
+#### dots. [ドッツ] – IT勉強会・セミナーなどエンジニアのためのイベント情報
+
+http://eventdots.jp/
+
+#### Peatix | 簡単イベント管理、チケット販売サイト（ピーティックス）
+
+http://peatix.com/
