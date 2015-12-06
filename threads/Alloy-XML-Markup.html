@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alloy XML Markup | myResource</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+
+</head>
+
+<body>
+    <div style="height:4px;background-color:black;"></div>
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-header">
+    <h3>Alloy XML Markup</h3>
+    <small>2015-01-27</small>
+</div>
+<div>
+    <h4 id="Introduction">Introduction</h4>
+<p>In Alloy, the XML markup abstracts the Titanium SDK UI components, so you do not need to code the creation and setup of these components using JavaScript and the Titanium SDK API. All view files must be placed in the app/views folder of your project with the ‘.xml’ file extension. During code compilation, Alloy looks for these markup files in this specific location to transform them into Titanium code, which can be executed by Studio and the CLI.</p>
+<p>The following code is an example of a view file:</p>
+<figure class="highlight xml"><pre><div class="line">app/views/index.xml</div><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Label</span> <span class="attribute">id</span>=<span class="value">"label"</span> <span class="attribute">onClick</span>=<span class="value">"doClick"</span>&gt;</span>Hello, World<span class="tag">&lt;/<span class="title">Label</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>The Alloy tag is the root element for the XML markup and is required in all views. The Window element defines an instance of the Ti.UI.Window object and within that window instance is the Label element, which defines an instance of a Ti.UI.Label object. Almost all of the Alloy XML tags are the class names of the Titanium UI components without the preceding namespace. Exceptions to this rule are listed in the Element table below.</p>
+<p>Within a controller, a UI component can be referenced if its ID attribute is defined. For instance, the Label component in the above example has its ID defined as ‘label’ and can be referenced in the controller using $.label.</p>
+<p>If the top-level UI component does not have an ID defined, it can be referenced using the name of the view-controller prefixed with a dollar sign and period (‘$.’). For instance, the Window element in the above example can be referenced in the controller using $.index.</p>
+<p>The following code is how you would traditionally code the markup example using the Titanium SDK:</p>
+<figure class="highlight"><pre><div class="line">Resources/app.js</div><div class="line"><span class="keyword">var</span> win = Ti.UI.createWindow();</div><div class="line"><span class="keyword">var</span> <span class="keyword">label</span> = Ti.UI.createLabel(<span class="comment">{text: 'Hello, World'}</span>);</div><div class="line"><span class="keyword">label</span>.addEventListener(<span class="string">'click'</span>, doClick);</div><div class="line">win.add(<span class="keyword">label</span>);</div></pre></figure>
+
+<p>In the previous example, the win.open call and implementation of the doClick callback are missing. In Alloy, your JavaScript code and Titanium API calls need to be placed in the associated controller file to the view. For this example, the code would need be placed in app/controllers/index.js.</p>
+<p>The following table lists the attributes for the UI components:</p>
+<ul>
+<li><strong>id</strong>:<br>Identifies UI elements in the controller (prefixed with ‘$.’) and style sheet (prefixed with ‘#’). IDs should be unique per view but are not global, so multiple views can have components with the same ID.</li>
+<li><strong>class</strong>:<br>Applies additional styles (prefixed with ‘.’ in the TSS file). Overwrites the element style but not the id style.</li>
+<li><strong>autoStyle</strong>:<br>Enables the autostyle feature for dynamic styling when adding or removing classes (since Alloy 1.2.0). See Dynamic Styles: Autostyle for more details.</li>
+<li><strong>formFactor</strong>:<br>Acts as a compiler directive for size-specific view components. Value can either be handheld or tablet. See Conditional Code for more details.</li>
+<li><strong>if</strong>:<br>Use a custom query to apply additional styles to the element (since Alloy 1.4.0). See Conditional Code and Alloy Styles and Themes: Custom Query Styles for more details.</li>
+<li><strong>module</strong>:<br>Requires in a CommonJS module (since Alloy 1.2.0). Note that the XML element must be named after a create＜XMLElement＞ method in the module. See Module Attribute for more details.</li>
+<li><strong>ns</strong>:<br>Overrides the default Titanium.UI namespace. See Namespace for more details.</li>
+<li><strong>platform</strong>:<br>Switches the namespace based on the platform and acts as a compiler directive for platform-specific view components. Values can be any combination of platforms. See Conditional Code and Namespace for more details.</li>
+<li><strong>＜properties＞</strong>:<br>Assigns values to UI object properties. See Property Mapping for more details.</li>
+<li><strong>＜events＞</strong>:<br>Assigns callbacks to UI object events. See Event Handling for more details.</li>
+</ul>
+<p>The following table lists the special XML elements besides the Titanium UI components:</p>
+<ul>
+<li><strong>Alloy</strong>:<br>Root element for all view XML files. Required in all views.</li>
+<li><strong>Collection</strong>:<br>Creates a singleton or instance of the specified collection. See the Collection Element for more details.</li>
+<li><strong>Model</strong>:<br>Creates a singleton or instance of the specified model. See the Model Element for more details.</li>
+<li><strong>Module</strong>:<br>Imports a module view inside this view (since Alloy 1.2.0). See the Module Element for more details.</li>
+<li><strong>Require</strong>:<br>Imports a widget or includes another view inside this view. See the Require Element for more details.</li>
+<li><strong>Widget</strong>:<br>Imports a widget inside this view. Same as the Require Element with the type specified to ‘widget’. See Importing Widgets for more details.</li>
+</ul>
+<p><strong>index.xml is a special case that only accepts the following view components as direct children of the Alloy tag:</strong></p>
+<ul>
+<li>Ti.UI.Window or ＜Window＞</li>
+<li>Ti.UI.TabGroup or ＜TabGroup＞</li>
+<li>Ti.UI.iOS.NavigationWindow or ＜NavigationWindow＞ (since Alloy 1.2.2)</li>
+<li>Ti.UI.iPad.SplitWindow or ＜SplitWindow＞</li>
+</ul>
+<p>Other views do not have any format restrictions.</p>
+<p>For examples, refer to the ‘Alloy XML Markup’ examples in the Titanium API Guides site. Most examples are in the components under the Titanium.UI section and also in Titanium.Android.Menu, Titanium.Facebook.LoginButton, Titanium.Map and Titanium.Media.VideoPlayer.</p>
+<h4 id="Require_Element">Require Element</h4>
+<p>The Require XML element has two uses: including external views and importing widgets into the current view.</p>
+<p><strong>Including Views</strong></p>
+<p>Views may be included in other views using the Require element. Specify the type attribute as ‘view’ and the src attribute should be the view file minus the ‘.xml’ extension, and assign a unique value to the id attribute to reference the UI objects in the controller code. If you omit the type attribute, Alloy assumes it is implicitly set to ‘view’.</p>
+<p>The example below creates a tab group in the main view file and includes two separate files for each tab.</p>
+<p>Contents of the main view file (index.xml) that includes the rss and about views:</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">TabGroup</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">id</span>=<span class="value">"leftTab"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Require</span> <span class="attribute">type</span>=<span class="value">"view"</span> <span class="attribute">src</span>=<span class="value">"rss"</span> <span class="attribute">id</span>=<span class="value">"rssTab"</span>/&gt;</span>		</div><div class="line">        <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Tab</span> <span class="attribute">id</span>=<span class="value">"rightTab"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Require</span> <span class="attribute">type</span>=<span class="value">"view"</span> <span class="attribute">src</span>=<span class="value">"about"</span> <span class="attribute">id</span>=<span class="value">"aboutTab"</span>/&gt;</span>		</div><div class="line">        <span class="tag">&lt;/<span class="title">Tab</span>&gt;</span>	</div><div class="line">    <span class="tag">&lt;/<span class="title">TabGroup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>Contents of the rss view file (rss.xml):</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span> <span class="attribute">id</span>=<span class="value">'rssWindow'</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">WebView</span> <span class="attribute">id</span>=<span class="value">'rssView'</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>Contents of the about view file (about.xml):</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span> <span class="attribute">id</span>=<span class="value">'aboutWindow'</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">WebView</span> <span class="attribute">id</span>=<span class="value">'aboutView'</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>To use UI objects from the included views, the controller needs to reference the ID specified in the Require element and use the getView function with the ID of the object as the argument: var object = $.requireId.getView(‘objectId’). The code below demonstrates how to access the web view object from the about view, in the previous example code, to change the URL property.</p>
+<figure class="highlight"><pre><div class="line"><span class="keyword">var</span> aboutView = $.aboutTab.getView(<span class="string">'aboutView'</span>); </div><div class="line">aboutView.url = <span class="string">'http://www.google.com'</span>;</div></pre></figure>
+
+<p><strong>Importing Widgets</strong></p>
+<p>Within a view in the regular Alloy project space (app/views), use the ＜Widget＞ tag to import the widget into the application. A ＜Widget/＞ element is equivalent to a ＜Require/＞ element whose type attribute is set to “widget”.</p>
+<p><strong>To import a widget:</strong></p>
+<ol>
+<li>Copy the widget to the app/widgets folder. The widget must be contained within its own folder.</li>
+<li>Add the ＜Widget＞ tag in the XML markup and specify its src attribute as the folder name of the widget.</li>
+<li>Update the dependencies object in the config.json file by adding a key/value pair with the name of the widget as the key and the version number as the value.</li>
+</ol>
+<p>You can optionally add the id and name attributes to the Require element:</p>
+<ul>
+<li>The id attribute allows you to reference the widget in the controller code. You can use this reference to call methods exported by the widget.</li>
+<li>The name attribute allows you to import a specific view-controller in the widget rather than the default one (widget.xml/widget.js). Specify the name of the view-controller minus the extension.</li>
+</ul>
+<p>For example, to import the mywidget widget in to a project, copy mywidget to the app/widgets folder.</p>
+<figure class="highlight"><pre><div class="line">app</div><div class="line">├── config<span class="built_in">.</span>json</div><div class="line">├── controllers</div><div class="line">│   └── index<span class="built_in">.</span>js</div><div class="line">├── views</div><div class="line">│   └── index<span class="built_in">.</span><span class="built_in">xml</span></div><div class="line">└── widgets</div><div class="line">    └── mywidget</div><div class="line">        ├── controllers</div><div class="line">        │   ├── foo<span class="built_in">.</span>js</div><div class="line">        │   └── widget<span class="built_in">.</span>js</div><div class="line">        ├── views</div><div class="line">        │   ├── foo<span class="built_in">.</span><span class="built_in">xml</span></div><div class="line">        │   └── widget<span class="built_in">.</span><span class="built_in">xml</span></div><div class="line">        └── widget<span class="built_in">.</span>json</div></pre></figure>
+
+<p>Then, add the ＜Widget＞ tag in the XML markup. Specify the src attribute as mywidget. Additionally, define the id and name attributes. Since the name attribute is defined, the foo view-controller is used instead of the widget view-controller.</p>
+<figure class="highlight"><pre><div class="line">app/views/index.xml</div><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Widget</span> <span class="attribute">src</span>=<span class="value">"mywidget"</span> <span class="attribute">id</span>=<span class="value">"foo"</span> <span class="attribute">name</span>=<span class="value">"foo"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>Since the id attribute is defined, the widget can be accessed from the controller.</p>
+<figure class="highlight"><pre><div class="line">app/controllers/<span class="built_in">index</span>.js</div><div class="line">$.<span class="built_in">index</span>.<span class="keyword">open</span>();</div><div class="line">$.foo.myMethod();</div></pre></figure>
+
+<p>Finally, update the dependencies object in the config.json file by adding a key/value pair with the mywidget as the key and the 1.0 as the value:</p>
+<figure class="highlight"><pre><div class="line">   <span class="keyword">...</span></div><div class="line"><span class="string">"dependencies"</span>: {</div><div class="line"><span class="string">"mywidget"</span>:<span class="string">"1.0"</span></div><div class="line">   }</div></pre></figure>
+
+<p><strong>Passing Arguments</strong></p>
+<p>You can add any custom attributes to the markup to initialize a widget or controller. For example, consider the following mark-up:</p>
+<figure class="highlight"><pre><div class="line">apps/views/index.xml</div><div class="line">&lt;Require <span class="variable">id=</span><span class="string">"foobar"</span> <span class="variable">src=</span><span class="string">"foo"</span> <span class="variable">customTitle=</span><span class="string">"Hello"</span> <span class="variable">customImage=</span><span class="string">"hello.png"</span>/&gt;</div></pre></figure>
+
+<p>This is equivalent to the following JavaScript:</p>
+<figure class="highlight"><pre><div class="line">apps/controllers/index.js</div><div class="line"><span class="keyword">var</span> foobar = Alloy.createController(<span class="string">'foo'</span>, { </div><div class="line">    id: <span class="string">"foobar"</span>, </div><div class="line">    customTitle: <span class="string">"Hello"</span>, </div><div class="line">    customImage: <span class="string">"hello.png"</span> </div><div class="line">});</div></pre></figure>
+
+<p>In the required view’s controller, the custom properties can be referenced using the arguments[0] variable, for example:</p>
+<figure class="highlight"><pre><div class="line">apps/controllers/foo.js</div><div class="line"><span class="keyword">var</span> args = <span class="built_in">arguments</span>[<span class="number">0</span>] || {}</div><div class="line"><span class="keyword">var</span> title = args.customTitle || <span class="string">'Foobar'</span>;</div><div class="line"><span class="keyword">var</span> image = args.customImage || <span class="string">'default.png'</span>;</div></pre></figure>
+
+<p>See <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Controllers-section-34636384_AlloyControllers-PassingArguments" target="_blank" rel="external">Alloy Controllers: Passing Arguments</a> for more details.</p>
+<p><strong>Binding Events</strong></p>
+<p>To bind a callback to an event in a required view using the on attribute as detailed in Event Handling below, add an event listener for the UI component to trigger the event. For example, suppose you want to require a view that only contains a button. In the parent view, you require the button view and assign a callback to the click event:</p>
+<p>Parent View:</p>
+<figure class="highlight"><pre><div class="line">&lt;Require <span class="variable">id=</span><span class="string">"fooButton"</span> <span class="variable">src=</span><span class="string">"button"</span> <span class="variable">onClick=</span><span class="string">"doClick"</span> /&gt;</div></pre></figure>
+
+<p>Button View:</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Button</span> <span class="attribute">id</span>=<span class="value">"button"</span>&gt;</span>Click Me!<span class="tag">&lt;/<span class="title">Button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>The doClick method is defined in the parent’s controller.</p>
+<p>In the controller of the required view, you need to define an event listener that triggers the event for the parent view to receive:</p>
+<figure class="highlight"><pre><div class="line">$.button.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span> </span>{ </div><div class="line">    $.trigger(<span class="string">'click'</span>, e); </div><div class="line">});</div></pre></figure>
+
+<p>When the button is clicked in the parent view, the controller code in the required view fires a click event, which is caught by the parent view and executes the doClick method.</p>
+<p><strong>Adding Children Views</strong></p>
+<p>Since Alloy 1.3.0, if your Require element is a parent view, you can add children elements to it. These children elements are passed to the parent controller as an array called arguments[0].children. Use this array to access the children views to add them to the parent.</p>
+<p>In the example below, you have the index view which is using the Require element to include another view called info. The required view is a yellow box with a brown border. Its controller adds the label view element passed in as the first element of the arguments[0].children array.</p>
+<figure class="highlight"><pre><div class="line">app/views/info.xml</div><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">View</span> <span class="attribute">backgroundColor</span>=<span class="value">"yellow"</span> <span class="attribute">borderWidth</span>=<span class="value">"0.5"</span> <span class="attribute">borderColor</span>=<span class="value">"brown"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+
+
+<figure class="highlight"><pre><div class="line">controllers/info.js</div><div class="line"><span class="keyword">var</span> args = <span class="built_in">arguments</span>[<span class="number">0</span>] || {};</div><div class="line"><span class="comment">// add children if there are any</span></div><div class="line">_.each(args.children || [], <span class="function"><span class="keyword">function</span><span class="params">(child)</span> </span>{</div><div class="line">    $.info.add(child);</div><div class="line">});</div><div class="line">$.info.height = Ti.UI.SIZE;</div></pre></figure>
+
+
+
+<figure class="highlight"><pre><div class="line">app/views/index.xml</div><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Require</span> <span class="attribute">src</span>=<span class="value">"info"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Label</span>&gt;</span>I am an info box.<span class="tag">&lt;/<span class="title">Label</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="title">Require</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<h4 id="Namespace">Namespace</h4>
+<p>By default, all UI components specified in the views are prefixed with Titanium.UI for convenience. However, to use a component not part of the Titanium.UI namespace, use the ns attribute. For example, to use the Titanium.Map.View, do:</p>
+<figure class="highlight"><pre><div class="line">&lt;View <span class="variable">ns=</span><span class="string">"Ti.Map"</span> <span class="variable">id=</span><span class="string">"map"</span>/&gt;</div></pre></figure>
+
+<p>For UI objects that belong to a specific platform, such as the navigation window. Use the platform attribute to use the object, for example:</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">NavigationWindow</span> <span class="attribute">platform</span>=<span class="value">"ios"</span>/&gt;</span></div></pre></figure>
+
+<p>Many of the Titanium view proxies not part of the Titanium.UI namespace do not require that the ns attribute be explicitly set. The following elements are implicitly mapped to a namespace if one is not defined:</p>
+<ul>
+<li><strong>Menu</strong>: Ti.Android</li>
+<li><strong>MenuItem</strong>: Ti.Android</li>
+<li><strong>Annotation</strong>: Ti.Map</li>
+<li><strong>VideoPlayer</strong>: Ti.Media</li>
+<li><strong>MusicPlayer</strong>: Ti.Media</li>
+<li><strong>AdView</strong>: Ti.UI.iOS</li>
+<li><strong>CoverFlowView</strong>: Ti.UI.iOS</li>
+<li><strong>NavigationWindow</strong>: Ti.UI.iOS</li>
+<li><strong>TabbedBar</strong>: Ti.UI.iOS</li>
+<li><strong>Toolbar</strong>: Ti.UI.iOS</li>
+<li><strong>DocumentViewer</strong>: Ti.UI.iPad</li>
+<li><strong>Popover</strong>: Ti.UI.iPad</li>
+<li><strong>SplitWindow</strong>: Ti.UI.iPad</li>
+<li><strong>NavigationGroup</strong>: Ti.UI.iPhone</li>
+<li><strong>StatusBar</strong>: Ti.UI.iPhone</li>
+</ul>
+<h4 id="Conditional_Code">Conditional Code</h4>
+<p>Add the platform, formFactor and if attributes to apply XML elements based on conditionals.</p>
+<ul>
+<li>To specify a platform-specific element, use the platform attribute and assign it a platform, such as, android, blackberry, ios, or mobileweb.<br>Comma separate the values to logically OR the values together, for example, platform=’ios,android’ indicates both Android and iOS.<br>Prepend the value with an exclamation point (!) to negate the value, for example, platform=’!ios’ indicates all platforms except iOS.</li>
+<li>To specify a device-size-specific element, use the formFactor attribute and assign it a device size–either handheld or tablet.</li>
+<li>To use a custom query (available since Alloy 1.4), assign the if attribute to a conditional statement in the Alloy.Globals namespace. This conditional statement must return a boolean value. You may only assign one query to the if attribute.</li>
+<li>Since Alloy 1.6, the application can also pass custom Boolean properties with the Alloy.createController() method, which can be accessed by the XML. Assign the if attribute to the name of the property prefixed with the $.args namespace, for example, $.args.someProperty.</li>
+</ul>
+<p>You can use all the attributes in combination.</p>
+<p>In the example below, different Annotation objects are displayed in the view based on the platform and device size.</p>
+<figure class="highlight"><pre><div class="line"><span class="tag">&lt;<span class="title">Alloy</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">Window</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">Module</span> <span class="attribute">id</span>=<span class="value">"mapview"</span> <span class="attribute">module</span>=<span class="value">"ti.map"</span> <span class="attribute">method</span>=<span class="value">"createView"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Annotation</span> <span class="attribute">title</span>=<span class="value">"Cupertino"</span> <span class="attribute">platform</span>=<span class="value">'ios'</span> <span class="attribute">formFactor</span>=<span class="value">'tablet'</span> <span class="attribute">latitude</span>=<span class="value">'37.3231'</span> <span class="attribute">longitude</span>=<span class="value">'-122.0311'</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Annotation</span> <span class="attribute">title</span>=<span class="value">"Redwood City"</span> <span class="attribute">platform</span>=<span class="value">'ios'</span> <span class="attribute">formFactor</span>=<span class="value">'handheld'</span> <span class="attribute">latitude</span>=<span class="value">'37.4853'</span> <span class="attribute">longitude</span>=<span class="value">'-122.2353'</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Annotation</span> <span class="attribute">title</span>=<span class="value">"Mountain View"</span> <span class="attribute">platform</span>=<span class="value">'android'</span> <span class="attribute">latitude</span>=<span class="value">'37.3861'</span> <span class="attribute">longitude</span>=<span class="value">'-122.0828'</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Annotation</span> <span class="attribute">title</span>=<span class="value">"Palo Alto"</span> <span class="attribute">platform</span>=<span class="value">'android,ios,mobileweb'</span> <span class="attribute">latitude</span>=<span class="value">'37.4419'</span> <span class="attribute">longitude</span>=<span class="value">'-122.1419'</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="title">Annotation</span> <span class="attribute">title</span>=<span class="value">"San Francisco"</span> <span class="attribute">platform</span>=<span class="value">'mobileweb'</span> <span class="attribute">latitude</span>=<span class="value">'37.7750'</span> <span class="attribute">longitude</span>=<span class="value">'-122.4183'</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="title">View</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">Window</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">Alloy</span>&gt;</span></div></pre></figure>
+
+<p>You can also create subfolders, named as the platform, in the views directory as another way to create platform-specific views. Refer to <a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_Concepts-section-34636240_AlloyConcepts-Platform-SpecificResources" target="_blank" rel="external">Alloy Concepts: Platform-Specific Resources</a>.</p>
+
+</div>
+<div class="page-footer">
+    Currently v1.0.0
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

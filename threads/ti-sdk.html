@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ti-SDK | myResource</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+
+</head>
+
+<body>
+    <div style="height:4px;background-color:black;"></div>
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-header">
+    <h3>Ti-SDK</h3>
+    <small>2015-12-06</small>
+</div>
+<div>
+    <h4 id="appcelerator-modules">appcelerator-modules</h4>
+<p><a href="https://github.com/appcelerator-modules" target="_blank" rel="external">https://github.com/appcelerator-modules</a></p>
+<h4 id="titanium-google-analytics">titanium-google-analytics</h4>
+<p><a href="https://github.com/Sitata/titanium-google-analytics" target="_blank" rel="external">https://github.com/Sitata/titanium-google-analytics</a></p>
+<h4 id="nend">nend</h4>
+<p><a href="http://www.nend.net/dl/mediapartner/" target="_blank" rel="external">http://www.nend.net/dl/mediapartner/</a></p>
+<h4 id="Create_the_Ultimate_User_Experience:_Must-Have_Appcelerator_Modules">Create the Ultimate User Experience: Must-Have Appcelerator Modules</h4>
+<p><a href="http://www.appcelerator.com/blog/2015/03/must-have-modules/" target="_blank" rel="external">http://www.appcelerator.com/blog/2015/03/must-have-modules/</a></p>
+<h4 id="New_Facebook_Modules">New Facebook Modules</h4>
+<p><a href="http://www.tidev.io/2014/11/20/new-facebook-modules/" target="_blank" rel="external">http://www.tidev.io/2014/11/20/new-facebook-modules/</a></p>
+<h4 id="Camera_and_Photo_Gallery_APIs">Camera and Photo Gallery APIs</h4>
+<p><a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Camera_and_Photo_Gallery_APIs" target="_blank" rel="external">http://docs.appcelerator.com/titanium/latest/#!/guide/Camera_and_Photo_Gallery_APIs</a></p>
+<figure class="highlight"><pre><div class="line"><span class="keyword">var</span> photoSource = Titanium.Media.getIsCameraSupported() ? Titanium.Media.showCamera : Titanium.Media.openPhotoGallery;</div><div class="line"></div><div class="line"></div><div class="line">photoSource ({</div><div class="line">    success : <span class="function"><span class="keyword">function</span><span class="params">(event)</span> </span>{</div><div class="line">        processImage(event.media, <span class="function"><span class="keyword">function</span><span class="params">(_photoResp)</span></span>{</div><div class="line">            photoObject = _photoResp;</div><div class="line">        });</div><div class="line">    },</div><div class="line">    cancel : <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line">        <span class="comment">// called when user cancels taking a picture</span></div><div class="line">    },</div><div class="line">    error : <span class="function"><span class="keyword">function</span><span class="params">(error)</span> </span>{</div><div class="line">        <span class="comment">// display alert on error</span></div><div class="line">        <span class="keyword">if</span> (error.code == Titanium.Media.NO_CAMERA) {</div><div class="line">            alert(<span class="string">'Please run this test on device'</span>);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            alert(<span class="string">'Unexpected error: '</span> + error.code);</div><div class="line">        }</div><div class="line">    },</div><div class="line">    saveToPhotoGallery : <span class="literal">false</span>,</div><div class="line">    allowEditing : <span class="literal">true</span>,</div><div class="line">    <span class="comment">// only allow for photos, no video</span></div><div class="line">    mediaTypes : [Ti.Media.MEDIA_TYPE_PHOTO]</div><div class="line">});</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">processImage</span><span class="params">(_mediaObject, _callback)</span> </span>{</div><div class="line">    <span class="comment">// since there is no ACS integration yet, we will fake it</span></div><div class="line">    <span class="keyword">var</span> photoObject = {</div><div class="line">        image : _mediaObject,</div><div class="line">        title : <span class="string">"Sample Photo "</span> + <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line">    }</div><div class="line">    <span class="comment">// return the object to the caller</span></div><div class="line">    _callback(photoObject);</div><div class="line">}</div></pre></figure>
+
+<h4 id="Search_and_Query_APIs">Search and Query APIs</h4>
+<p><a href="http://docs.appcelerator.com/cloud/latest/#!/guide/search_query" target="_blank" rel="external">http://docs.appcelerator.com/cloud/latest/#!/guide/search_query</a></p>
+
+</div>
+<div class="page-footer">
+    Currently v1.0.0
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
